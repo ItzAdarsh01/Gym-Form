@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMNASIUM
+    </title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    body{
+          margin:0px;
+          padding:0px;
+          background: url('rck (2).jpg');
+          color: whitesmoke;
+          font-family: 'Dancing Script', cursive;
+    }
+    .lf{
+      display:inline-block;
+      position:absolute;
+        left:30px;
+        top:30px;
+     
+     
+    }
+    .lf  img{
+        margin:10px;
+        width:60px;
+
+    }
+    .md{
+        display:block;
+        width:35%;
+        margin:12px auto;
+    }
+    .rg{
+        position:absolute;
+        right:30px;
+        top:20px;
+        display:inline-block;
+       }
+       .lol{
+        display:inline-block;
+        
+       }
+       .lol li{
+        display:inline-block;
+        font-size: small;
+       }
+       .lol li a{
+           color: whitesmoke;
+        text-decoration:none;
+        padding:12px 12px ;
+        font-size:15px  ;
+       }
+       .lol li a:hover{
+           text-decoration: underline;
+           color:rgb(71, 220, 246);
+       }
+       .lk{
+           text-align: center;
+       }
+       .btn{
+           margin: auto;
+           padding: 3px;
+           font-size: 13px;
+           border: 2px solid gray;
+           border-radius: 10px;
+           cursor:pointer;
+           font-family: 'Dancing Script', cursive;
+       }
+       .btn:hover{
+           background-color: rgb(192, 244, 244);
+       }
+       .cont{
+           border:2px solid greenyellow;
+           margin:20px;
+           padding: 25px ;
+           width:33%;
+     border-radius: 5px;
+     border-color: rgb(225, 58, 200);
+     text-align: center;
+     background-color:rgb(4, 4, 37);
+       }
+       .form input{
+           text-align: center;
+           padding: 4px;
+       }
+       .der{
+              margin:auto;
+       }
+       span{
+           color: rgb(230, 39, 39);
+       }
+       #btan{
+           padding:12px;
+           margin:35px;
+           border:4px solid gray;
+           border-radius: 25px;
+           font-family: 'Dancing Script', cursive;
+           cursor: pointer;
+       }
+       #btan:hover{
+        background-color: rgb(192, 244, 244); 
+       }
+    </style>
+
+<body>
+    <div class="kal">
+      Current Time is <span id="time"></span>  
+    </div>
+    <header class="hdr">
+ <div class="lf">
+<img src="logo78.png">
+<div class="lk"> GetFit</div>
+ </div>
+ <div class="md">
+<ul class="lol">
+    <li><a href="#"><strong>Home</strong></a></li>
+    <li><a href="#"><strong>About Us</strong></a></li>
+    <li><a href="#"><strong>Fitness Test</strong></a></li>
+    <li><a href="#"><strong>Contact</strong></a></li>
+    
+</ul>
+</div>
+<div class="rg">
+   <button class="btn"><strong>Join Now</strong></button>
+   <button class="btn"><strong>Email Us</strong></button>
+</div>
+
+    </header>
+    <button id="btan" onclick="f2()"><strong>Show Form/Hide Form</strong></button>
+    <div class="cont" id="kap">
+        <h1>GetFit is now in your City</h1>
+        <form action="xyz.php">
+       <div class="form">
+           <input type="text"name=""placeholder="Enter your name">
+       </div>
+       <div class='form'>
+        Gender :
+       male<input type="radio" name="gend">
+        female<input type="radio" name="gend">
+    </div>
+    <div class="form">
+        <input type="text"name=""placeholder="Enter your Age">
+    </div>
+    <div class="form">
+        Preferred time :<input type="time" name="mydate">
+    </div>
+    <div class="form">
+        <input type="text"name=""placeholder="Enter your Phone Number">
+    </div>
+    <div class="form">
+        <input type="email"name=""placeholder="Enter your email adderss">
+    </div>
+    <div>
+        <button class="btn">Submit</button>
+    </div>
+        </form>
+    </div>
+    <div class="der">
+        <h1>Use CODE <span>GET20</span> to get 20% disount</h1>
+    </div>
+    <script>
+        function f1()
+        {
+            time=new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML=time;
+        }
+        setInterval(f1,1000);
+        function f2()
+        {   let btn=document.getElementById('btan');
+            let p=document.getElementById('kap');
+            if(p.style.display!='none')
+            {
+                p.style.display='none';
+            }
+            else{
+                p.style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>
